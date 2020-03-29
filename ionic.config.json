@@ -1,0 +1,7 @@
+{
+  "name": "FadelFinalProject",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
