@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+    	<ion-back-button text="Back" color="dark" fill="outline"></ion-back-button>
+    </ion-buttons>
+	<ion-title *ngIf="!id">Add News</ion-title>
+	<ion-title *ngIf="id>=1">Update News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+	<ion-item>
+		<ion-label position="floating">News Title</ion-label>
+		<ion-input type="text" [(ngModel)]="news_title"></ion-input>
+	</ion-item>
+
+	<ion-item *ngIf="!id">
+		<ion-label position="floating">News Image</ion-label>
+		<ion-textarea [(ngModel)]="news_img"></ion-textarea>
+  </ion-item>
+  
+  <ion-item>
+		<ion-label position="floating">News Category</ion-label>
+		<ion-textarea [(ngModel)]="news_category"></ion-textarea>
+  </ion-item>
+  
+  <ion-item>
+		<ion-label position="floating">News Description</ion-label>
+		<ion-textarea [(ngModel)]="news_description"></ion-textarea>
+  </ion-item>
+  
+  <ion-item>
+		<ion-label position="floating">News Location</ion-label>
+		<ion-textarea [(ngModel)]="news_location"></ion-textarea>
+	</ion-item>
+
+	<ion-button expand="block" *ngIf="!id" padding color="tertiary" (click)="createNews()" fill="outline">Submit</ion-button>
+	<ion-button expand="block" *ngIf="id>=1" padding color="tertiary" (click)="updateNews()" fill="outline">Update</ion-button>
+</ion-content>

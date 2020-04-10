@@ -1,3 +1,37 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+    <ion-menu side="start">
+        <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-title color="dark" class="ion-text-center">
+          Menu
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-menu-toggle>
+        <ion-item lines="none" routerLink="/tabs" color="tertiary">
+          <ion-icon name="newspaper-outline" slot="start"></ion-icon>
+          <ion-label>Headline News</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item lines="none" routerLink="./tabs/filter" color="light">
+          <ion-icon name="checkbox-outline" slot="start"></ion-icon>
+          <ion-label>News Category</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item lines="none" routerLink="./tabs/about" color="tertiary">
+          <ion-icon name="star-half-outline" slot="start"></ion-icon>
+          <ion-label>Rate Us!</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+  </ion-menu>
+        <ion-router-outlet main></ion-router-outlet>      
+    
+
 </ion-app>

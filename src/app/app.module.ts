@@ -9,11 +9,15 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { HttpModule } from '@angular/http';
+import { PostProvider } from '../providers/post-provider';
+import { IonicStorageModule } from '@ionic/Storage';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [ IonicStorageModule.forRoot(), HttpModule, BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
+    PostProvider,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

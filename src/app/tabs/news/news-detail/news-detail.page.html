@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/tabs/news"></ion-back-button>
+    </ion-buttons>
+    <ion-title>News</ion-title>
+    <ion-button slot="primary" color="light" (click)="edit(id, title, desc, loc, cat)">
+      <ion-icon color="success" name="create-outline"></ion-icon>
+    </ion-button>
+    <ion-button slot="primary" color="light" (click)="alertConfirm()">
+      <ion-icon color="danger" name="trash-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col no-padding>
+        <h2>{{ title }}</h2>
+        <p>{{ loc }}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-img src="https://image.shutterstock.com/image-vector/breaking-news-world-map-backgorund-260nw-640991758.jpg"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p>{{ desc }}</p>
+      </ion-col>
+    </ion-row>
+    <br>
+    <ion-row>
+      <ion-col>
+        <p>CATEGORY : {{ cat }} NEWS</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
